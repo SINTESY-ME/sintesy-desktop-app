@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "Sintesy Desktop",
+  "productName": "Sintesy",
   "version": "0.1.0",
   "identifier": "com.sintesy.desktop",
   "app": {
@@ -14,13 +14,7 @@
   "bundle": {
     "active": true,
     "targets": [
-      "msi",
-      "nsis",
-      "appimage",
-      "deb",
-      "rpm",
-      "dmg",
-      "app"
+      "rpm"
     ],
     "icon": [
       "icons/32x32.png",
