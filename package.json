@@ -1,18 +1,48 @@
 {
   "name": "sintesy-desktop-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
+  "homepage": "https://sintesy.me",
   "scripts": {
-    "dev": "tauri dev",
-    "build": "tauri build"
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:linux": "electron-builder --linux",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Sintesy",
+    "email": "sintesyme@gmail.com"
+  },
   "license": "ISC",
-  "description": "",
+  "description": "Sintesy Desktop Application",
   "devDependencies": {
-    "@tauri-apps/cli": "^2.9.4",
     "concurrently": "^9.2.1",
-    "sharp": "^0.34.5"
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.sintesy.desktop",
+    "productName": "Sintesy",
+    "files": [
+      "main.js",
+      "preload.js",
+      "icons/**/*"
+    ],
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility",
+      "icon": "icons/icon.png",
+      "maintainer": "Sintesy <sintesyme@gmail.com>"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icons/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icons/icon.icns"
+    }
   }
 }

@@ -11,6 +11,11 @@
 
 # production
 /build
+/dist
+
+# electron
+out/
+.cache/
 
 # misc
 .DS_Store
