@@ -31,7 +31,7 @@
       "icons/**/*"
     ],
     "linux": {
-      "target": "AppImage",
+      "target": ["deb", "AppImage"],
       "category": "Utility",
       "icon": "icons/icon.png",
       "maintainer": "Sintesy <sintesyme@gmail.com>"

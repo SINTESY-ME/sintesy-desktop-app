@@ -16,10 +16,8 @@ function createWindow() {
     }
   });
 
-  // Load the remote URL
   mainWindow.loadURL('https://dashboard.sintesy.me');
 
-  // Open DevTools in development mode (optional)
   if (process.env.NODE_ENV === 'development') {
     mainWindow.webContents.openDevTools();
   }
