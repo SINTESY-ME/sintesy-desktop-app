@@ -20,7 +20,8 @@
   "devDependencies": {
     "concurrently": "^9.2.1",
     "electron": "^33.2.0",
-    "electron-builder": "^25.1.8"
+    "electron-builder": "^25.1.8",
+    "sharp": "^0.35.2"
   },
   "build": {
     "appId": "com.sintesy.desktop",
@@ -31,7 +32,10 @@
       "icons/**/*"
     ],
     "linux": {
-      "target": ["deb", "AppImage"],
+      "target": [
+        "deb",
+        "AppImage"
+      ],
       "category": "Utility",
       "icon": "icons/icon.png",
       "maintainer": "Sintesy <sintesyme@gmail.com>"
@@ -39,6 +43,13 @@
     "win": {
       "target": "nsis",
       "icon": "icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Sintesy"
     },
     "mac": {
       "target": "dmg",
